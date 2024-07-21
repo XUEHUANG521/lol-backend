@@ -15,17 +15,17 @@ async function getSpellsDetails(spellIds) {
       for (let key in allSpells.data) {
         if (allSpells.data[key].key == id) {
           return {
-            id,
-            name: allSpells.data[key].name,
-            description: allSpells.data[key].description,
-            imageUrl: `https://ddragon.leagueoflegends.com/cdn/14.14.1/img/spell/${allSpells.data[key].image.full}`
-          };
-        }
-      }
-    });
-    return spellDetails;
+			id,
+			name: allSpells.data[key].name,
+			description: allSpells.data[key].description,
+			imageUrl: `https://ddragon.leagueoflegends.com/cdn/14.14.1/img/spell/${allSpells.data[key].image.full}`
+		  };
+		}
+	  }
+	});
+	return spellDetails;
   } catch (error) {
-    console.error('Error fetching spell details:', error);
+	console.error('Error fetching spell details:', error);
   }
 }
 
